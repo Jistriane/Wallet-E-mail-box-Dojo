@@ -4,7 +4,7 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 import path from 'path'
 
 export default defineConfig({
-  base: '/Wallet-E-mail-box-Dojo/',
+  base: "/Wallet-E-mail-box-Dojo/",
   plugins: [
     react(),
     nodePolyfills({
