@@ -1,0 +1,73 @@
+MIT License
+
+Copyright (c) 2024 MultiversX Wallet Email System Smart Contracts
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Additional Terms for Smart Contracts:
+
+1. Security and Audit:
+   - Users are responsible for conducting their own security audits
+   - No warranty is provided regarding the security of the contracts
+   - Users should verify all contract interactions
+
+2. Gas Optimization:
+   - Gas costs may vary based on network conditions
+   - Users are responsible for ensuring sufficient gas for transactions
+   - No guarantee of optimal gas usage is provided
+
+3. Network Compatibility:
+   - Contracts are designed for MultiversX network
+   - No guarantee of compatibility with other networks
+   - Users should verify network compatibility
+
+4. Updates and Maintenance:
+   - No obligation to maintain or update contracts
+   - Users should monitor for potential updates
+   - No guarantee of backward compatibility
+
+5. Regulatory Compliance:
+   - Users are responsible for compliance with local regulations
+   - No legal advice is provided
+   - Users should consult legal professionals
+
+6. Risk Disclosure:
+   - Smart contracts involve inherent risks
+   - Users should understand all risks before use
+   - No liability for financial losses
+
+7. Third-Party Dependencies:
+   - Contracts may depend on third-party services
+   - No guarantee of third-party service availability
+   - Users should verify dependencies
+
+8. Emergency Procedures:
+   - No guarantee of emergency procedures
+   - Users should have their own contingency plans
+   - No obligation to provide support
+
+9. Documentation:
+   - Documentation is provided "as is"
+   - No guarantee of accuracy or completeness
+   - Users should verify all information
+
+10. Community Support:
+    - No obligation to provide support
+    - Community support may be available
+    - No guarantee of response time 

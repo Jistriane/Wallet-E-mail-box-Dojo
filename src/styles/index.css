@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    @apply bg-gray-900 text-white;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    @apply text-4xl font-bold;
+}
+
+@media (prefers-color-scheme: light) {
+     :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    body {
+        @apply bg-white text-gray-900;
+    }
+}
+
+
+/* Chakra UI overrides */
+
+.chakra-container {
+    @apply max-w-7xl mx-auto px-4 sm: px-6 lg: px-8;
+}
+
+.chakra-button {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.chakra-button-primary {
+    @apply bg-blue-600 text-white hover: bg-blue-700;
+}
+
+.chakra-button-secondary {
+    @apply bg-gray-600 text-white hover: bg-gray-700;
+}
+
+.chakra-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus: ring-2 focus: ring-blue-500;
+}
+
+.chakra-card {
+    @apply bg-white dark: bg-gray-800 rounded-lg shadow-md p-6;
+}
+
+.chakra-heading {
+    @apply text-2xl font-bold mb-4;
+}
+
+.chakra-text {
+    @apply text-gray-600 dark: text-gray-300;
+}

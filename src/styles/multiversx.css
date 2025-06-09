@@ -1,0 +1,78 @@
+/* Estilos específicos para o MultiversX Wallet */
+
+.multiversx-wallet {
+    --primary-color: #23f7dd;
+    --secondary-color: #6c5ce7;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --error-color: #ff6b6b;
+    --success-color: #51cf66;
+    --warning-color: #ffd43b;
+}
+
+.multiversx-wallet * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.multiversx-wallet {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.multiversx-wallet button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.multiversx-wallet button:hover {
+    opacity: 0.9;
+}
+
+.multiversx-wallet button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.multiversx-wallet input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.multiversx-wallet input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.multiversx-wallet .error {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.multiversx-wallet .success {
+    color: var(--success-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.multiversx-wallet .warning {
+    color: var(--warning-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
