@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -39,11 +40,9 @@ h1 {
     }
 }
 
-
 /* Chakra UI overrides */
-
 .chakra-container {
-    @apply max-w-7xl mx-auto px-4 sm: px-6 lg: px-8;
+    @apply max-w-7xl mx-auto px-4;
 }
 
 .chakra-button {
@@ -51,19 +50,19 @@ h1 {
 }
 
 .chakra-button-primary {
-    @apply bg-blue-600 text-white hover: bg-blue-700;
+    @apply bg-blue-600 text-white hover:bg-blue-700;
 }
 
 .chakra-button-secondary {
-    @apply bg-gray-600 text-white hover: bg-gray-700;
+    @apply bg-gray-600 text-white hover:bg-gray-700;
 }
 
 .chakra-input {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus: ring-2 focus: ring-blue-500;
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
 }
 
 .chakra-card {
-    @apply bg-white dark: bg-gray-800 rounded-lg shadow-md p-6;
+    @apply bg-white rounded-lg shadow-md p-6 dark:bg-gray-800;
 }
 
 .chakra-heading {
@@ -71,5 +70,5 @@ h1 {
 }
 
 .chakra-text {
-    @apply text-gray-600 dark: text-gray-300;
+    @apply text-gray-600 dark:text-gray-300;
 }

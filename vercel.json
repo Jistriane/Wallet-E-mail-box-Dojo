@@ -1,0 +1,58 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist",
+        "installCommand": "npm install"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/assets/(.*)",
+      "headers": { 
+        "cache-control": "public, max-age=31536000, immutable",
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(.*)\\.(js|css|ico|json)",
+      "headers": { 
+        "cache-control": "public, max-age=31536000, immutable",
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html",
+      "headers": {
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block"
+      }
+    }
+  ],
+  "env": {
+    "VITE_NETWORK": "testnet",
+    "VITE_API_URL": "https://testnet-api.multiversx.com",
+    "VITE_GATEWAY_URL": "https://testnet-gateway.multiversx.com",
+    "VITE_EXPLORER_URL": "https://testnet-explorer.multiversx.com",
+    "VITE_WALLET_CONNECT_BRIDGE": "https://bridge.walletconnect.org",
+    "VITE_WALLET_CONNECT_DEEP_LINK": "https://maiar.page.link/?apn=com.elrond.maiar.wallet&isi=1519405832&ibi=com.elrond.maiar.wallet&link=https://maiar.com/",
+    "VITE_CHAIN_ID": "T",
+    "NODE_VERSION": "18.x"
+  }
+} 
