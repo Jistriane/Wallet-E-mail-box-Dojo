@@ -2,7 +2,40 @@
 
 A web wallet for the MultiversX network (formerly Elrond) with integrated decentralized email system via smart contract.
 
-🌐 **[Access the Application](https://wallet-email-box-dojo-khmhh6npl-jistrianes-projects.vercel.app)**
+🌐 **[Access the Application](https://wallet-email-box-dojo-w6un86bnb-jistrianes-projects.vercel.app)**
+
+## Deployment Status
+
+The deployment has been completed successfully! The application is available in the following environments:
+
+### Access URLs
+- **Preview:** [https://wallet-email-box-dojo-iml3u25zw-jistrianes-projects.vercel.app](https://wallet-email-box-dojo-iml3u25zw-jistrianes-projects.vercel.app)
+- **Production:** [https://wallet-email-box-dojo-khmhh6npl-jistrianes-projects.vercel.app](https://wallet-email-box-dojo-khmhh6npl-jistrianes-projects.vercel.app)
+
+### Automatic Configurations
+- ✅ Automatic build with Node.js 18.x
+- ✅ MultiversX testnet environment variables
+- ✅ Security headers
+- ✅ Asset cache optimization
+- ✅ Route configurations
+- ✅ SSL/HTTPS
+
+### Project Status
+- ✅ Connected to MultiversX testnet
+- ✅ Automatic deployment configured
+- ✅ HTTPS enabled
+- ✅ Optimized cache
+- ✅ Security headers configured
+
+### Vercel Management
+Access the Vercel dashboard to monitor:
+- 📊 Build logs
+- 📈 Analytics
+- ⚙️ Project settings
+- 🔐 Environment variables
+- 🌐 Custom domains
+
+**Note:** For future deployments, no manual action is required. Vercel automatically detects pushes to the main branch and performs the deployment.
 
 ## Features
 

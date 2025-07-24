@@ -2,6 +2,41 @@
 
 Uma carteira web para a rede MultiversX (antiga Elrond) com sistema de e-mail descentralizado integrado via smart contract.
 
+🌐 **[Acesse a Aplicação](https://wallet-email-box-dojo-w6un86bnb-jistrianes-projects.vercel.app)**
+
+## Status do Deploy
+
+O deploy foi concluído com sucesso! A aplicação está disponível nos seguintes ambientes:
+
+### URLs de Acesso
+- **Preview:** [https://wallet-email-box-dojo-iml3u25zw-jistrianes-projects.vercel.app](https://wallet-email-box-dojo-iml3u25zw-jistrianes-projects.vercel.app)
+- **Produção:** [https://wallet-email-box-dojo-khmhh6npl-jistrianes-projects.vercel.app](https://wallet-email-box-dojo-khmhh6npl-jistrianes-projects.vercel.app)
+
+### Configurações Automáticas
+- ✅ Build automático com Node.js 18.x
+- ✅ Variáveis de ambiente da testnet MultiversX
+- ✅ Headers de segurança
+- ✅ Otimização de cache para assets
+- ✅ Configurações de rotas
+- ✅ SSL/HTTPS
+
+### Status do Projeto
+- ✅ Conectado à testnet da MultiversX
+- ✅ Deploy automático configurado
+- ✅ HTTPS habilitado
+- ✅ Cache otimizado
+- ✅ Headers de segurança configurados
+
+### Gerenciamento via Vercel
+Acesse o painel de controle da Vercel para monitorar:
+- 📊 Logs de build
+- 📈 Analytics
+- ⚙️ Configurações do projeto
+- 🔐 Variáveis de ambiente
+- 🌐 Domínios personalizados
+
+**Nota:** Para futuros deploys, não é necessário fazer nada manualmente. A Vercel detecta automaticamente pushes na branch principal e realiza o deploy.
+
 ## Funcionalidades
 
 ### Carteira MultiversX
@@ -43,11 +78,13 @@ Uma carteira web para a rede MultiversX (antiga Elrond) com sistema de e-mail de
 - React + TypeScript
 - Vite
 - Chakra UI
+- Tailwind CSS
 - ethers.js
 - MultiversX SDK
 - Solidity (contrato inteligente)
+- Vercel (deploy)
 
-## Instalação
+## Instalação e Desenvolvimento Local
 
 1. Clone o repositório:
 ```bash
@@ -58,24 +95,72 @@ cd multiversx-wallet
 2. Instale as dependências:
 ```bash
 npm install
-# ou
-yarn install
 ```
 
 3. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 ```env
-VITE_MULTIVERSX_API_URL=https://api.multiversx.com
-VITE_NETWORK=devnet
-VITE_CHAIN_ID=D
-VITE_CONTRACT_ADDRESS=SEU_CONTRATO
+VITE_NETWORK=testnet
+VITE_API_URL=https://testnet-api.multiversx.com
+VITE_GATEWAY_URL=https://testnet-gateway.multiversx.com
+VITE_EXPLORER_URL=https://testnet-explorer.multiversx.com
+VITE_WALLET_CONNECT_BRIDGE=https://bridge.walletconnect.org
+VITE_WALLET_CONNECT_DEEP_LINK=https://maiar.page.link/?apn=com.elrond.maiar.wallet&isi=1519405832&ibi=com.elrond.maiar.wallet&link=https://maiar.com/
+VITE_CHAIN_ID=T
 ```
 
 4. Inicie o servidor de desenvolvimento:
 ```bash
 npm run dev
-# ou
-yarn dev
 ```
+
+## Deploy na Vercel
+
+O projeto está atualmente deployado na Vercel e pode ser acessado em: [https://wallet-email-box-dojo-khmhh6npl-jistrianes-projects.vercel.app](https://wallet-email-box-dojo-khmhh6npl-jistrianes-projects.vercel.app)
+
+### Deploy Automático
+
+1. Fork o repositório no GitHub
+
+2. Na Vercel:
+   - Conecte sua conta GitHub
+   - Importe o repositório
+   - As configurações necessárias já estão no `vercel.json`
+
+3. Configurações importantes:
+   - O projeto usa Node.js 18.x
+   - Todas as variáveis de ambiente da testnet MultiversX estão configuradas
+   - Headers de segurança e cache otimizado
+   - SSL/HTTPS habilitado automaticamente
+   - Rotas configuradas para SPA
+
+### Deploy Manual
+
+Se precisar fazer um deploy manual:
+
+```bash
+# Instale a CLI da Vercel
+npm i -g vercel
+
+# Login na Vercel
+vercel login
+
+# Deploy
+vercel
+
+# Deploy para produção
+vercel --prod
+```
+
+### Monitoramento e Logs
+
+- Acesse o [Dashboard da Vercel](https://vercel.com/dashboard)
+- Monitore:
+  - Status do deploy
+  - Logs de build
+  - Analytics
+  - Performance
+  - Erros
+  - Variáveis de ambiente
 
 ## Como usar
 - Instale a extensão MultiversX DeFi Wallet no navegador
@@ -84,90 +169,57 @@ yarn dev
 - Consulte o saldo, envie EGLD e assine mensagens pela interface da carteira
 
 ## Estrutura do Projeto
-- `src/components/Wallet.tsx`: Interface da carteira MultiversX
-- `src/components/EmailSystem.tsx`: Interface do sistema de e-mail Web3
-- `contracts/email-contract/`: Contrato inteligente de e-mail
-- `src/services/`: Serviços de integração com blockchain e carteira
-
-## Licença
-
-MIT
+```
+src/
+├── components/         # Componentes React
+│   ├── Wallet.tsx     # Interface da carteira
+│   ├── EmailSystem.tsx # Sistema de e-mail
+│   └── ...
+├── services/          # Serviços e integrações
+├── styles/           # Estilos e temas
+├── theme/            # Configuração do Chakra UI
+└── types/            # Tipos TypeScript
+```
 
 ## Prints e Fluxos do Sistema
 
 ### 1. Conexão com a Carteira MultiversX
 
-![Tela de conexão da carteira](prints/conexao-carteira.png)
+![Tela de conexão da carteira](artifacts/prints/PRIMEIRA%20CONEXAO%20COM%20A%20CARTEIRA.png)
 
 Ao acessar a aplicação, o usuário é recebido com a tela principal da MultiversX Wallet. Nela, é possível:
-- **Conectar Carteira:** O botão "Conectar Carteira" inicia o processo de conexão com a extensão MultiversX DeFi Wallet instalada no navegador. Ao clicar, a extensão é aberta (lado direito da imagem), permitindo ao usuário escolher a conta e autorizar a conexão com o site.
+- **Conectar Carteira:** O botão "Conectar Carteira" inicia o processo de conexão com a extensão MultiversX DeFi Wallet instalada no navegador.
 - **Criar Nova Carteira:** Caso o usuário não possua uma carteira, pode criar uma nova diretamente pela interface.
-- **Importar de Seed Phrase:** Usuários que já possuem uma seed phrase podem importar sua carteira preenchendo o campo correspondente e clicando em "Importar".
-- **Status do Sistema de E-mail:** Abaixo, o sistema de e-mail descentralizado exibe o status de carregamento e conexão com a carteira.
-
-Dicas de uso:
-- Certifique-se de que a extensão MultiversX DeFi Wallet está instalada e desbloqueada no navegador.
-- Se a extensão não estiver instalada, um link é exibido para facilitar a instalação.
-- Após conectar, o endereço da carteira será exibido e as funcionalidades de e-mail e transações serão liberadas.
-
----
+- **Importar de Seed Phrase:** Usuários que já possuem uma seed phrase podem importar sua carteira.
 
 ### 2. Criação da Carteira e Exibição da Seed Phrase
 
-![Criação da carteira e seed phrase](prints/criacao-carteira.png)
-
-Após clicar em "Criar Nova Carteira", a aplicação gera automaticamente uma nova carteira MultiversX para o usuário. Na sequência, é exibida uma notificação verde com a seed phrase (frase de segurança) gerada.
-
-O que o usuário vê/faz nesta tela:
-- **Endereço da Carteira:** O endereço público da carteira recém-criada é exibido para referência e uso em transações.
-- **Seed Phrase:** A seed phrase é apresentada em destaque na notificação. IMPORTANTE: O usuário deve anotar e guardar essa frase em local seguro, pois ela é a única forma de recuperar o acesso à carteira.
-- **Verificar Saldo:** O usuário pode consultar o saldo da carteira recém-criada.
-- **Enviar EGLD:** É possível enviar EGLD para outros endereços diretamente da interface.
-- **Importar de Seed Phrase:** Caso já possua uma seed phrase, o usuário pode importar uma carteira existente.
-
-Dicas de uso:
-- Nunca compartilhe sua seed phrase com terceiros.
-- Guarde a seed phrase em local seguro e offline.
-- Se perder a seed phrase, não será possível recuperar a carteira ou os fundos.
-
----
+![Criação da carteira e seed phrase](artifacts/prints/CARTEIRA%20CRIADA%20PALAVRA%20DE%20SEGURANÇA%20.png)
 
 ### 3. Carteira Conectada
 
-![Carteira conectada](prints/carteira-conectada.png)
+![Carteira conectada](artifacts/prints/CARTEIRA%20CONECTADA.png)
 
-Após a conexão bem-sucedida com a extensão MultiversX DeFi Wallet, a interface exibe o endereço da carteira conectada e libera todas as funcionalidades da aplicação.
+### 4. Área de E-mail
 
-O que o usuário vê/faz nesta tela:
-- **Endereço da Carteira:** O endereço público da carteira conectada aparece no topo, facilitando a cópia e o uso em transações.
-- **Desconectar Carteira:** O botão permite ao usuário desconectar a carteira da aplicação a qualquer momento.
-- **Criar Nova Carteira / Importar Seed Phrase:** Mesmo com uma carteira conectada, o usuário pode criar uma nova ou importar outra carteira usando uma seed phrase.
-- **Sistema de E-mail Descentralizado:** Abaixo, o sistema de e-mail descentralizado exibe as abas de navegação: Caixa de Entrada, Enviados, Novo E-mail e Spam.
-- **Conectar Carteira (E-mail):** Caso o sistema de e-mail precise de uma conexão adicional, o botão "Conectar Carteira" estará disponível.
+![Área de envio de e-mail](artifacts/prints/AREA%20DE%20EMAIL.png)
 
-Dicas de uso:
-- Sempre confira o endereço exibido antes de realizar transações.
-- Para alternar entre carteiras, basta desconectar e conectar novamente com outra conta na extensão.
-- O sistema de e-mail só funciona com a carteira conectada.
+## Contribuição
 
----
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Crie um Pull Request
 
-### 4. Área de E-mail – Envio de Novo E-mail
+## Segurança
 
-![Área de envio de e-mail](prints/area-email.png)
+- O projeto utiliza as melhores práticas de segurança
+- Headers HTTP de segurança configurados
+- HTTPS forçado
+- Proteção contra XSS e outras vulnerabilidades
+- Variáveis de ambiente seguras
 
-Na aba "Novo E-mail" do Sistema de E-mail Descentralizado, o usuário pode enviar mensagens seguras e imutáveis para outros endereços MultiversX diretamente pela blockchain.
+## Licença
 
-O que o usuário vê/faz nesta tela:
-- **Campos de envio:**
-  - **Endereço do destinatário:** Insira o endereço MultiversX para o qual deseja enviar o e-mail.
-  - **Assunto:** Defina o título da mensagem.
-  - **Conteúdo do e-mail:** Escreva o corpo da mensagem.
-- **Botão "Enviar E-mail":** Após preencher os campos, clique para enviar o e-mail. A mensagem será registrada no smart contract e ficará disponível na caixa de entrada do destinatário.
-- **Abas de navegação:** O usuário pode alternar entre Caixa de Entrada, Enviados, Novo E-mail e Spam para gerenciar todas as mensagens.
-- **Status da carteira:** O rodapé exibe o endereço da carteira conectada e permite desconectar rapidamente.
-
-Dicas de uso:
-- Certifique-se de que o endereço do destinatário está correto antes de enviar.
-- O envio de e-mails é registrado na blockchain, tornando o conteúdo imutável e auditável.
-- Utilize a aba "Enviados" para acompanhar as mensagens já enviadas.
+MIT
